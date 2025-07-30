@@ -1,0 +1,25 @@
+.btn-brownish-red {
+  background-color: #8B0000; /* dark red */
+  color: white;
+  border: none;
+}
+
+.btn-brownish-red:hover {
+  background-color: #a52a2a; /* brown */
+}
+.table th, .table td {
+  vertical-align: middle;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.table thead {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+.badge {
+  font-size: 0.9rem;
+  padding: 0.4em 0.75em;
+  border-radius: 0.5rem;
+}

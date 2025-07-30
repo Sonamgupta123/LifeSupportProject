@@ -1,0 +1,58 @@
+.queries-container {
+  background-color: #f6f8fb;
+  padding: 40px 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.queries-title {
+  text-align: center;
+  color: #c94c63;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  width: fit-content;
+  max-width: 600px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.queries-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.queries-table thead {
+  background-color: #1f1f23;
+  color: #fff;
+}
+
+.queries-table th,
+.queries-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.queries-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  padding: 20px;
+}

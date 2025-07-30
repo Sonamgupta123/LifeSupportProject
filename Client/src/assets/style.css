@@ -1,0 +1,61 @@
+/* assets/style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #fafafa;
+}
+
+.header, .nav, .footer {
+  background: #d63031;
+  color: white;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  padding: 2rem;
+  background: #ffeaa7;
+}
+
+.slide.active {
+  display: block;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

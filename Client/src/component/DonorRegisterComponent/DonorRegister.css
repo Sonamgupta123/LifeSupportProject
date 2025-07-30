@@ -1,0 +1,30 @@
+/* DonorRegister.css */
+.register-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.register-form-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-brownish-red {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+}
+
+.btn-brownish-red:hover {
+  background-color: #a80000;
+}
+
+.form-section-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #8B0000;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}

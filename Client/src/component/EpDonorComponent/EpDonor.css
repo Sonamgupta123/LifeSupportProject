@@ -1,0 +1,70 @@
+.epdonor-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  color: #c94c63;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.output-msg {
+  text-align: center;
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.epdonor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.epdonor-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.epdonor-form input,
+.epdonor-form select,
+.epdonor-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.epdonor-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.epdonor-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #c94c63;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.epdonor-form button:hover {
+  background-color: #a63a4e;
+}

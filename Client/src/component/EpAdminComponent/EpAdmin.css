@@ -1,0 +1,73 @@
+.epadmin-container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f8f9fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  color: #c94c63;
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.output-msg {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.epadmin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.epadmin-form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.epadmin-form input,
+.epadmin-form select,
+.epadmin-form textarea {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.epadmin-form input[readonly] {
+  background-color: #e9ecef;
+  color: #555;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-group label {
+  font-weight: normal;
+}
+
+.epadmin-form button {
+  padding: 12px;
+  background-color: #c94c63;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.epadmin-form button:hover {
+  background-color: #a63a4e;
+}

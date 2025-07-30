@@ -1,0 +1,108 @@
+/* Container & Layout */
+.dashboard-section {
+  padding: 60px 0;
+  background-color: #f7f9fc;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-col {
+  padding: 10px;
+}
+
+.dashboard-col-50 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dashboard-col-50 {
+    width: 48%;
+  }
+}
+
+/* Boxes */
+.dashboard-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.dashboard-desc {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Lists */
+.dashboard-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.dashboard-list li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.dashboard-list span {
+  font-weight: bold;
+}
+
+.critical {
+  color: #dc3545;
+}
+
+.high {
+  color: #ffc107;
+}
+
+.low {
+  color: #fd7e14;
+}
+
+.available {
+  color: #28a745;
+}
+
+/* Counters */
+.dashboard-counter {
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.dashboard-counter-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.dashboard-counter-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+}

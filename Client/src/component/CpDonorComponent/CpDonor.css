@@ -1,0 +1,58 @@
+.cpadmin-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f8f9fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  color: #c94c63;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.output-msg {
+  text-align: center;
+  color: #dc3545;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cpadmin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cpadmin-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.cpadmin-form input {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.cpadmin-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #c94c63;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cpadmin-form button:hover {
+  background-color: #a63a4e;
+}
