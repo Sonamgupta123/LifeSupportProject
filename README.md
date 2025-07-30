@@ -21,13 +21,14 @@ This is a MERN Stack based project designed to help users manage health-related 
 cd Server
 npm install
 npm start
+```
 
 ### Fronted:
-bash
+```bash
 cd Client
 npm install
 npm start
-
+```
 Author
 Sonam Gupta
 
