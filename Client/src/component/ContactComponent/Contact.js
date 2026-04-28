@@ -54,7 +54,7 @@ function Contact() {
               <div className="contact-image-wrap d-flex flex-wrap">
                 <img src="./assets/images/hr.png.jpg" className="img-fluid avatar-image" alt="" />
                 <div className="d-flex flex-column justify-content-center ms-3">
-                  <p className="mb-0">Ratnesh Ranve</p>
+                  <p className="mb-0">Sonam Gupta</p>
                   <p className="mb-0"><strong>HR & Office Manager</strong></p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ function Contact() {
                 </p>
                 <p className="d-flex">
                   <i className="bi-envelope me-2"></i>
-                  <a href="mailto:ratnesh@gmail.com">Ratnesh@gmail.com</a>
+                  <a href="mailto:ratnesh@gmail.com">sonam@gmail.com</a>
                 </p>
                 <a href="#" className="custom-btn btn mt-3">Get Direction</a>
               </div>

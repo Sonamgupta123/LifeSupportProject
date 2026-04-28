@@ -64,11 +64,7 @@ const donorSchema = mongoose.Schema({
     // Only required if donorType is 'blood'
   },
 
-  organs: {
-    type: [String],
-    enum: ['Kidney', 'Liver', 'Heart', 'Lungs'],
-    // Only used if donorType is 'organ'
-  },
+ 
 
   available: {
     type: Boolean,

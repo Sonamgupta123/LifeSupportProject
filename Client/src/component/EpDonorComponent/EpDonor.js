@@ -15,7 +15,7 @@ function EpDonor() {
   const [gender, setGender] = useState('');
   const [donorType, setDonorType] = useState('');
   const [bloodGroup, setBloodGroup] = useState('');
-  const [organ, setOrgan] = useState('');
+  
   const [available, setAvailable] = useState(false);
   const [output, setOutput] = useState('');
 
@@ -31,7 +31,7 @@ function EpDonor() {
         setGender(donor.gender || '');
         setDonorType(donor.donorType || '');
         setBloodGroup(donor.bloodGroup || '');
-        setOrgan(donor.organ || '');
+        
         setAvailable(donor.available || false);
       })
       .catch(() => setOutput("Failed to load donor profile"));
@@ -48,7 +48,7 @@ function EpDonor() {
   gender,
   donorType,
   bloodGroup: donorType === "blood" ? bloodGroup : "",
-  organs: donorType === "organ" ? [organ] : [],
+  
   available
 }
 
@@ -67,7 +67,7 @@ function EpDonor() {
         localStorage.setItem("gender", gender);
         localStorage.setItem("donorType", donorType);
         localStorage.setItem("bloodGroup", donorType === "blood" ? bloodGroup : "");
-        localStorage.setItem("organs", donorType === "organ" ? organ : "");
+       
         localStorage.setItem("available", available);
 
         navigate("/donor");
@@ -131,7 +131,7 @@ function EpDonor() {
         <select value={donorType} onChange={e => setDonorType(e.target.value)}>
           <option value="">Select Donor Type</option>
           <option value="blood">Blood</option>
-          <option value="organ">Organ</option>
+        
         </select>
 
         {donorType === "blood" && (
@@ -151,20 +151,7 @@ function EpDonor() {
           </>
         )}
 
-        {donorType === "organ" && (
-          <>
-            <label>Select Organ:</label>
-            <select value={organ} onChange={e => setOrgan(e.target.value)}>
-              <option value="">Select Organ</option>
-              <option value="kidney">Kidney</option>
-              <option value="liver">Liver</option>
-              <option value="heart">Heart</option>
-              <option value="lungs">Lungs</option>
-              <option value="pancreas">Pancreas</option>
-              <option value="intestine">Intestine</option>
-            </select>
-          </>
-        )}
+        
 
         <label>
           <input

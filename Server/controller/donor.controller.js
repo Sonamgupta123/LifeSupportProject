@@ -31,7 +31,7 @@ catch(err){
 }
 export const fetch = async (req, res) => {
   try {
-    const { donorType, city, bloodGroup, organs } = url.parse(req.url, true).query;
+    const { donorType, city, bloodGroup } = url.parse(req.url, true).query;
 
     const condition = {};
 
@@ -46,11 +46,7 @@ export const fetch = async (req, res) => {
       condition.bloodGroup = bloodGroup;
     }
 
-    if (donorType === 'organ' && organs) {
-      // Case-insensitive match inside the `organs` array
-      condition.organs = { $in: [organs.toLowerCase()] };
-    }
-
+    
     const donors = await donorSchemaModel.find(condition);
    // console.log("Matched Donors:", donors);
 

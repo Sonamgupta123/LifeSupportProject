@@ -16,21 +16,15 @@ function DonorRegister() {
     gender: '',
     donorType: '',
     bloodGroup: '',
-    organs: [],
     available: true,
   });
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => {
-      if (name === 'organs') {
-        const updatedOrgans = checked
-          ? [...prev.organs, value]
-          : prev.organs.filter((org) => org !== value);
-        return { ...prev, organs: updatedOrgans };
-      }
+     
       if (name === 'donorType') {
-        return { ...prev, donorType: value, bloodGroup: '', organs: [] };
+        return { ...prev, donorType: value, bloodGroup: '' };
       }
       return { ...prev, [name]: type === 'checkbox' ? checked : value };
     });
@@ -47,7 +41,7 @@ function DonorRegister() {
       gender,
       donorType,
       bloodGroup,
-      organs,
+     
       available,
     } = form;
 
@@ -60,8 +54,7 @@ function DonorRegister() {
     if (donorType === 'blood' && !bloodGroup)
       return setOutput('Please select blood group.');
 
-    if (donorType === 'organ' && organs.length === 0)
-      return setOutput('Please select at least one organ.');
+  
 
     const donorData = {
       name,
@@ -76,7 +69,7 @@ function DonorRegister() {
     };
 
     if (donorType === 'blood') donorData.bloodGroup = bloodGroup;
-    else if (donorType === 'organ') donorData.organs = organs;
+   
 
     axios
       .post('http://localhost:3001/donor/register', donorData)
@@ -156,7 +149,7 @@ function DonorRegister() {
                 <select className="form-control" name="donorType" value={form.donorType} onChange={handleChange}>
                   <option value="">Select Type</option>
                   <option value="blood">Blood</option>
-                  <option value="organ">Organ</option>
+                 
                 </select>
               </div>
 
@@ -169,25 +162,6 @@ function DonorRegister() {
                       <option key={group}>{group}</option>
                     ))}
                   </select>
-                </div>
-              )}
-
-              {form.donorType === 'organ' && (
-                <div className="mb-3">
-                  <label>Organs to Donate</label>
-                  {['Kidney', 'Liver', 'Heart', 'Lungs'].map((org) => (
-                    <div className="form-check" key={org}>
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        name="organs"
-                        value={org}
-                        checked={form.organs.includes(org)}
-                        onChange={handleChange}
-                      />
-                      <label className="form-check-label">{org}</label>
-                    </div>
-                  ))}
                 </div>
               )}
 

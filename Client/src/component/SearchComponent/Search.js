@@ -10,11 +10,11 @@ function Search() {
   const [donorDetail, setDonorDetail] = useState([]);
 
   const bloodGroups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
-  const organs = ['Kidney', 'Liver', 'Heart', 'Lungs'];
+
 
   const handleSubmit = () => {
     if (!type) return setOutput('Please select type');
-    if (!subtype) return setOutput(`Please select ${type === 'blood' ? 'blood group' : 'organ'}`);
+    if (!subtype) return setOutput(`Please select ${type === 'blood' ? 'blood group' : ''}`);
     if (!location) return setOutput('Location is required');
 
     const formattedLocation = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
@@ -52,7 +52,7 @@ function Search() {
         <div className="col-lg-6 col-md-8 col-sm-10">
           <div className="form-card bg-white p-4 shadow rounded">
             {output && <div className="alert alert-info">{output}</div>}
-            <h2 className="mb-4 text-center">Search for Blood / Organ</h2>
+            <h2 className="mb-4 text-center">Search for Blood </h2>
             <form>
               <div className="mb-3">
                 <label>Type</label>
@@ -66,20 +66,20 @@ function Search() {
                 >
                   <option value="">Select Type</option>
                   <option value="blood">Blood</option>
-                  <option value="organ">Organ</option>
+                  
                 </select>
               </div>
 
               {type && (
                 <div className="mb-3">
-                  <label>{type === 'blood' ? 'Blood Group' : 'Organ'}</label>
+                  <label>{type === 'blood' ? 'Blood Group' : ''}</label>
                   <select
                     className="form-control"
                     value={subtype}
                     onChange={(e) => setSubtype(e.target.value)}
                   >
-                    <option value="">Select {type === 'blood' ? 'Blood Group' : 'Organ'}</option>
-                    {(type === 'blood' ? bloodGroups : organs).map((item) => (
+                    <option value="">Select {type === 'blood' ? 'Blood Group' : ''}</option>
+                    {(type === 'blood' ? bloodGroups :'').map((item) => (
                       <option key={item} value={item}>
                         {item}
                       </option>
@@ -126,7 +126,7 @@ function Search() {
                       <th>Email</th>
                       <th>Donor Type</th>
                       <th>Blood Group</th>
-                      <th>Organs</th>
+                     
                       <th>Mobile</th>
                       <th>Address</th>
                       <th>City</th>
@@ -142,7 +142,7 @@ function Search() {
                         <td>{row.email}</td>
                         <td className="text-capitalize">{row.donorType}</td>
                         <td>{row.bloodGroup || '-'}</td>
-                        <td>{Array.isArray(row.organs) ? row.organs.join(', ') : '-'}</td>
+                       
                         <td>{row.mobile}</td>
                         <td>{row.address}</td>
                         <td>{row.city}</td>

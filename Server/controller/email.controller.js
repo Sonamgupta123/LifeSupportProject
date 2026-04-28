@@ -7,6 +7,7 @@ function sendMail(email,password)
    auth: {
      user: 'stackmern660@gmail.com',
      pass: 'rzlc aqry vjrj qiuu'
+   
    }
  });
 

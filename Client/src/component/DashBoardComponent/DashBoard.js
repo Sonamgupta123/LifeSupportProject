@@ -10,7 +10,7 @@ function DashBoard() {
           <div className="dashboard-col dashboard-col-50">
             <div className="dashboard-box">
               <h2 className="dashboard-title">Dashboard</h2>
-              <h5 className="dashboard-subtitle">Blood & Organ Donation Overview</h5>
+              <h5 className="dashboard-subtitle">Blood Donation Overview</h5>
               <p className="dashboard-desc">
                 Real-time statistics of lives saved, donor contributions, and urgent needs.
                 Stay informed, stay involved, and help save lives.
@@ -31,16 +31,7 @@ function DashBoard() {
               </div>
 
               {/* Organ Needs */}
-              <div className="dashboard-col dashboard-col-50">
-                <div className="dashboard-box">
-                  <h5 className="dashboard-subtitle">Organ Donation Alerts</h5>
-                  <ul className="dashboard-list">
-                    <li><span className="critical">Kidney</span> – 5 waiting</li>
-                    <li><span className="high">Liver</span> – 3 needed</li>
-                    <li><span className="available">Cornea</span> – Available</li>
-                  </ul>
-                </div>
-              </div>
+             
             </div>
           </div>
 
@@ -66,7 +57,7 @@ function DashBoard() {
               <div className="dashboard-col dashboard-col-50">
                 <div className="dashboard-counter">
                   <div className="dashboard-counter-value">152<span>+</span></div>
-                  <div className="dashboard-counter-text">Organ Matches</div>
+                  <div className="dashboard-counter-text">Emergency Services</div>
                 </div>
               </div>
 

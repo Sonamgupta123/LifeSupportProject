@@ -135,7 +135,7 @@ function ManageDonors() {
                   <td>{donor.address}</td>
                   <td>{donor.donorType}</td>
                   <td>{donor.bloodGroup || 'N/A'}</td>
-                  <td>{Array.isArray(donor.organs) && donor.organs.length > 0 ? donor.organs.join(', ') : 'N/A'}</td>
+                  
                   <td>{donor.available ? 'Yes' : 'No'}</td>
                   <td>{donor.info ? new Date(donor.info).toLocaleDateString() : '-'}</td>
                   <td>
